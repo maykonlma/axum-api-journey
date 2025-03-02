@@ -32,6 +32,6 @@ pub async fn get_struct_env() -> String {
     config.my_rust_variable
 }
 
-pub async fn post_test(Json(user): Json<user_dto::User>) -> Json<user_dto::User> {
-    Json(user_dto::User { name: user.name })
+pub async fn post_test(Json(user): Json<user_dto::UserDto>) -> Json<user_dto::UserDto> {
+    Json(user_dto::UserDto { name: user.name })
 }
